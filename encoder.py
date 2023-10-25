@@ -5,3 +5,12 @@ class Encoder:
     # Where password is an 8-digit string
     def encode(self, password: str):
         return ''.join([str(int(digit) + 3) for digit in password])
+    
+def main():
+    password = input('Enter a password to encode: ')
+    encoder = Encoder(password)
+
+    print(encoder.password)
+
+if __name__ == '__main__':
+    main()
